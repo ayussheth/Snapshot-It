@@ -56,6 +56,7 @@ function handleSnapshotButtonClick() {
 }
 
 // Attach event listeners
+document.getElementById('snapshotBtn')
 selection.addEventListener('mousedown', handleMouseDown);
 document.addEventListener('mousemove', handleMouseMove);
 document.addEventListener('mouseup', handleMouseUp);
