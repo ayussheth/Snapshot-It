@@ -1,32 +1,25 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 3,  
   "name": "Snapshot it",
-  "version": "1.0",
   "description": "Take a snapshot of the selected area on a webpage.",
+  "version": "1.0",
+  "icons": {
+    "16": "logo.png"
+  },
   "permissions": [
     "activeTab",
     "scripting",
     "storage"
   ],
-  "action": {
-    "default_popup": "popup.html",
-    "default_icon": {
-      "16": "logo.png",
-      "32": "logo.png",
-      "48": "logo.png",
-      "128": "logo.png"
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["popup.js"]
     }
-  },
-  "content_security_policy": {
-    "extension_pages": "script-src 'self'; object-src 'self'"
-  },
-  "host_permissions": [
-    "*://*/*"
   ],
-  "web_accessible_resources": [
-    "popup.html",
-    "popup.js",
-    "popup.css",
-    "icons/*"
-  ]
+"action": {
+    "default_icon": "logo.png",
+    "default_popup": "popup.html"
+  }
 }
