@@ -2,13 +2,17 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Snapshot it</title>
+    <title>Screenshot Tool</title>
     <link rel="stylesheet" href="popup.css">
   </head>
   <body>
-    <h1>Snapshot Extension</h1>
+    <h1>Snapshot it</h1>
     <p>Click the button to take a snapshot of the selected area on a webpage:</p>
-    <button id="snapshotBtn">Capture</button>
+    <div id="snapshotArea">
+      <img src="https://via.placeholder.com/800x600" alt="Screenshot">
+      <div class="selection"></div>
+    </div>
+    <button id="snapshotBtn">Take Snapshot</button>
     <script src="popup.js"></script>
   </body>
 </html>
