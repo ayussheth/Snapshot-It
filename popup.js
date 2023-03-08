@@ -5,10 +5,7 @@ var startY = 0;
 var endX = 0;
 var endY = 0;
 var isDragging = false;
-
-// Define snapshotBtn and attach click event listener
 var snapshotBtn = document.getElementById('snapshotBtn');
-snapshotBtn.addEventListener('click', handleSnapshotButtonClick);
 
 // Handle mouse down event
 function handleMouseDown(event) {
@@ -60,6 +57,11 @@ function handleSnapshotButtonClick() {
 }
 
 // Attach event listeners
-selection.addEventListener('mousedown', handleMouseDown);
-document.addEventListener('mousemove', handleMouseMove);
-document.addEventListener('mouseup', handleMouseUp);
+if (selection) {
+  selection.addEventListener('mousedown', handleMouseDown);
+  document.addEventListener('mousemove', handleMouseMove);
+  document.addEventListener('mouseup', handleMouseUp);
+}
+if (snapshotBtn) {
+  snapshotBtn.addEventListener('click', handleSnapshotButtonClick);
+}
