@@ -8,8 +8,8 @@
   },
   "permissions": [
     "activeTab",
-    "scripting",
-    "storage"
+    "tabCapture",
+    "scripting"
   ],
   
   "content_scripts": [
